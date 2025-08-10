@@ -33,7 +33,7 @@ require $composer;
 
 Application::configure()
     ->withProviders([
-        App\Providers\ThemeServiceProvider::class,
+        App\Providers\TwhemeServiceProvider::class,
     ])
     ->boot();
 
@@ -49,7 +49,7 @@ Application::configure()
 |
 */
 
-collect(['setup', 'filters'])
+collect(['setup', 'filters', 'customPostTypes', 'acfFieldGroupDefinitions', 'bootstrap_5_wp_nav_menu_walker'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
