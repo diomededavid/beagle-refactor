@@ -13,7 +13,7 @@
          * @var array
          */
         protected static $views = [
-            // e.g. 'template-board-selection'
+            'template-board-selection'
         ];
 
         /**

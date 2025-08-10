@@ -1,10 +1,9 @@
 <?php
 
 // bootstrap 5 wp_nav_menu walker
-    namespace App;
-    use Walker_Nav_menu;
+    use Walker_Nav_Menu;
 
-    class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
+    class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_Menu
     {
         private $current_item;
         private $dropdown_menu_alignment_values = [
