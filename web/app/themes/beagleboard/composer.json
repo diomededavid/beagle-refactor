@@ -33,6 +33,55 @@
     "issues": "https://github.com/roots/sage/issues",
     "forum": "https://discourse.roots.io/"
   },
+  "repositories": {
+    "0": {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
+    },
+    "1": {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "type": "wordpress-plugin",
+        "version": "6.2.1.1",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=NGE4MDUxYzJjOGZjMjRjYmMyMzhhYmFiN2Y3NDI3MTc1ODg0ZGIwOWZhNTkxMDU3NjZhNmE2&t=6.2.1.1"
+        }
+      }
+    },
+    "my-yoast": {
+      "type": "composer",
+      "url": "https://my.yoast.com/packages/",
+      "only": [
+        "yoast/wordpress-seo-premium",
+        "yoast/wordpress-seo-local",
+        "yoast/wpseo-video",
+        "yoast/wpseo-woocommerce",
+        "yoast/yoast-news-seo"
+      ]
+    },
+    "gravityforms":{
+      "type": "package",
+      "package": {
+        "name": "gravityforms/gravityforms",
+        "version": "2.8.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key=9131c9c32b8bd675a358196ec9e0f5e2"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "gotoandplay/gravityforms-composer-installer": "^2.3"
+        }
+      }
+    }
+  },
   "autoload": {
     "psr-4": {
       "App\\": "app/"
@@ -40,7 +89,29 @@
   },
   "require": {
     "php": ">=8.2",
-    "roots/acorn": "^5.0"
+    "roots/acorn": "^5.0",
+    "wpackagist-plugin/safe-svg":"^2.0.3",
+    "roots/soil": "^4.0",
+    "johnbillion/extended-cpts": "^4.5",
+    "wpackagist-plugin/wp-search-with-algolia": "^2.5.4",
+    "wpackagist-plugin/wp-fail2ban": "^5.2.1",
+    "wpackagist-plugin/wp-fail2ban-addon-gravity-forms": "^2.0",
+    "wpackagist-plugin/featured-images-for-rss-feeds":"^1.6.2",
+    "wpackagist-plugin/youtube-embed-plus": "^14.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^6.0",
+    "wpackagist-plugin/download-monitor":"^4.9.14",
+    "wpackagist-plugin/wp-discourse":"^2.4",
+    "wpackagist-plugin/classic-editor": "^1.6",
+    "gravityforms/gravityforms": "^2.7.14",
+    "ffraenz/private-composer-installer": "^5.0",
+    "wpackagist-plugin/code-syntax-block":"^3.1.1",
+    "yoast/wordpress-seo": "^23.1",
+    "yoast/wordpress-seo-premium": "^23.1",
+    "wpackagist-plugin/w3-total-cache": "^2.2",
+    "wpackagist-plugin/font-awesome": "^4.3",
+    "wpackagist-plugin/all-bootstrap-blocks":"^1.3.10",
+    "wpackagist-plugin/generateblocks": "^1.8",
+    "wpackagist-plugin/wordpress-importer":"^0.8.1"
   },
   "require-dev": {
     "laravel/pint": "^1.20"
