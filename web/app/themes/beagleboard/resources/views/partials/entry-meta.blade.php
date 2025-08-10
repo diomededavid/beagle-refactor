@@ -2,7 +2,7 @@
   <div class="container my-auto">
     <div class="row">
       <div class="col overflow-hidden align-self-center">
-        <h1 class="entry-title">{!! App::title() !!}</h1>
+        <h1 class="entry-title">{!! the_title() !!}</h1>
         @if(has_excerpt() && !is_search())
           <p>{{get_the_excerpt()}}</p>
         @endif

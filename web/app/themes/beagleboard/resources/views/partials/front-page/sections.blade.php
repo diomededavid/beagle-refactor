@@ -1,8 +1,8 @@
-@if($featured_sections->have_posts())
+@if($featuredSections->have_posts())
   <div class="container">
     <div class="row my-4">
-        @while($featured_sections->have_posts())
-          @php $featured_sections->the_post() @endphp
+        @while($featuredSections->have_posts())
+          @php $featuredSections->the_post() @endphp
         <div class="col-lg-3 col-md-6 col-sm-6 my-2">
             <div class="card gray-to-white-grad shadow-sm hover-card h-100">
               <div class="card-body">
@@ -19,5 +19,4 @@
           </div>
         @endwhile
       </div>
-  </div>
 @endif
