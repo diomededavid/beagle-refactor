@@ -1,23 +1,10 @@
-<article @php(post_class('h-entry'))>
-  <header>
-    <h1 class="p-name">
-      {!! $title !!}
-    </h1>
-
-    @include('partials.entry-meta')
-  </header>
-
-  <div class="e-content">
-    @php(the_content())
+<article @if(is_singular('post')) {{post_class(['curves', 'grays'])}} @endif>
+  <div class="container my-2">
+    <div class="row">
+      <div class="col">
+        @php the_content() @endphp
+      </div>
+      @include('partials.sidebar')
+    </div>
   </div>
-
-  @if ($pagination())
-    <footer>
-      <nav class="page-nav" aria-label="Page">
-        {!! $pagination !!}
-      </nav>
-    </footer>
-  @endif
-
-  @php(comments_template())
 </article>

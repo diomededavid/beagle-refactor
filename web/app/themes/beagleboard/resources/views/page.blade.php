@@ -1,8 +1,9 @@
 @extends('layouts.app')
-
+@section('header')
+  @include('partials.entry-meta')
+@endsection
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @include('partials.page-header')
-    @includeFirst(['partials.content-page', 'partials.content'])
+  @while(have_posts()) @php the_post() @endphp
+    @include('partials.content-page')
   @endwhile
 @endsection

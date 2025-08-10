@@ -1,0 +1,84 @@
+
+
+@php
+    $urls = [
+        'openbeagle_design_url' => [
+            'icon' => '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 14 14" width="21">
+            <path fill="#f26322"
+                  d="M2.768 11.873c-.306-.304-.556-.575-.556-.604 0-.028.187-.322.415-.654.228-.332.415-.625.414-.652a7.12 7.12 0 0 0-.232-.624c-.185-.46-.247-.581-.31-.611a7.897 7.897 0 0 0-.75-.156c-.368-.066-.688-.133-.71-.15C1.01 8.397 1 8.198 1 7.62c0-.423.011-.786.024-.806.013-.02.347-.096.741-.17.395-.073.748-.145.784-.16.047-.018.132-.183.296-.568.126-.298.229-.57.229-.604 0-.034-.189-.334-.42-.666-.23-.333-.426-.631-.435-.664-.012-.044.126-.2.539-.614.305-.305.57-.555.589-.555.018 0 .32.195.67.435.35.239.661.442.691.45.057.016 1.067-.385 1.133-.45.03-.03.181-.757.31-1.496.016-.087.04-.124.092-.137.039-.01.408-.013.82-.01l.75.01.038.153c.021.084.09.443.154.798.064.354.133.661.154.682.044.043 1.056.457 1.117.457.023 0 .264-.152.535-.337l.652-.447a.848.848 0 0 1 .192-.11c.017 0 .281.25.586.556.41.411.551.571.54.615a9.137 9.137 0 0 1-.436.67c-.23.335-.42.633-.42.66 0 .055.438 1.105.48 1.15.014.015.36.091.77.167.41.077.763.147.785.155.03.012.04.204.04.81 0 .598-.01.803-.04.827-.022.017-.341.085-.71.15-.369.065-.705.136-.747.156-.06.03-.128.162-.31.612a8.547 8.547 0 0 0-.234.616c-.001.023.185.315.413.65.228.333.415.63.415.66 0 .03-.25.303-.555.607-.519.515-.56.55-.627.514-.04-.021-.32-.21-.622-.418-.303-.208-.572-.38-.599-.38a1.77 1.77 0 0 0-.321.147c-.151.08-.288.138-.304.128-.016-.01-.104-.201-.195-.425-.092-.224-.33-.801-.53-1.282-.2-.48-.364-.892-.364-.915 0-.022.09-.105.2-.183.387-.276.571-.508.711-.896.155-.429.128-.85-.081-1.283a1.688 1.688 0 0 0-1.5-.94c-.714 0-1.387.495-1.597 1.175-.086.279-.086.723 0 1.003.114.366.387.711.775.977.083.057.151.123.151.146 0 .023-.084.248-.188.501-.635 1.544-.86 2.08-.89 2.11-.024.022-.118-.012-.311-.115a1.803 1.803 0 0 0-.324-.147c-.026 0-.294.17-.595.378a17.58 17.58 0 0 1-.623.417c-.071.038-.103.012-.63-.512z"/>
+          </svg>',
+            'text' => 'Design'
+        ],
+        'discourse_url' => [
+            'icon' => '<i class="fa-brands fa-discourse fa-lg me-2 text-primary" aria-hidden="true"></i>',
+            'text' => 'Discourse'
+        ],
+        'documentation' => [
+            'icon' => '<i class="fas fa-book fa-lg me-2 text-primary" aria-hidden="true"></i>',
+            'text' => 'Documentation'
+        ],
+        'quickstart_url' => [
+            'icon' => '<i class="fas fa-bolt fa-lg me-2 text-primary" aria-hidden="true"></i>',
+            'text' => 'Quick Start'
+        ]
+    ];
+@endphp
+<nav class="container">
+    <div class="row">
+        @include('components.breadcrumbs')
+        <div class=" d-flex align-items-center align-content-center justify-content-start justify-content-md-end gap-4">
+            @foreach($urls as $url => $details)
+                @if(get_field($url))
+                    <a href="{{ the_field($url) }}" class="btn btn-light btn-sm text-primary d-none d-md-block">
+                        {!! $details['icon'] !!}
+                        <br>
+                        {{ $details['text'] }}
+                    </a>
+                @endif
+            @endforeach
+            <div class="dropdown d-sm-block d-md-none">
+                <button class="menu btn btn-light btn-sm dropdown-toggle text-primary text-center" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-lg fa-grip-vertical"></i>
+                    <br>
+                    Resources
+                </button>
+                <ul class="dropdown-menu">
+                    @foreach($urls as $url => $details)
+                        @if(get_field($url))
+                            <li>
+                                <a class="dropdown-item"  href="{{ the_field($url) }}">
+                                    {!! $details['icon'] !!}&nbsp;{{ $details['text'] }}
+                                </a>
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
+            </div>
+              <div class="dropdown">
+                <button class="menu btn btn-light btn-sm dropdown-toggle text-primary text-center" id="distroMenu"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-download fa-lg text-center" aria-hidden="true"></i>
+                  <br>
+                  Software Images
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right text-primary" aria-labelledby="distroMenu">
+                  @while($related_distros->have_posts())
+                    @php $related_distros->the_post() @endphp
+                    <li>
+                      <a href="{{ the_permalink() }}" class="dropdown-item">
+                        @if(get_field('latest'))
+                          <i class="fas fa-check-circle text-success" title="Latest Version"></i>&nbsp;
+                        @endif
+                        {{ the_title() }}</a>
+                    </li>
+                  @endwhile
+                  @php wp_reset_postdata(); @endphp
+                  <li>
+                    <a href="/distros/" class="dropdown-item">View All</a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+    </div>
+</nav>
