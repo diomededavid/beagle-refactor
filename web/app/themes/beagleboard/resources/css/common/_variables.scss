@@ -1,0 +1,49 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+
+$theme-colors: (
+  "primary": #f26322,
+  "secondary": #aa5137,
+  "success": #8ec969,
+  "danger": #ff4136,
+  "info": #03b2ee,
+  "frenchgray-dark": #4f4f51,
+  "black-seven": #ededee,
+  "github": #333,
+  "paypal": #00457c,
+  "patreon": #ff424d,
+  "blue": #03b2ee,
+  "facebook": #3b5998,
+  "twitter": #1da1f2,
+  "linkedin": #2867b2,
+  "check-mark-green": #8ec969,
+  "tongue-orange": #f26322,
+  "tongue-brown": #aa5137,
+  "hair-light-brown": #ab833c,
+  "hair-dark-brown": #8c6a39,
+  "light-gray": #ededee,
+  "gray": #f2f0ef,
+  "medium-gray": #888a8c,
+  "dark-gray": #5a5b5d,
+  "darker-gray": #4f4f51,
+  "black": #000,
+  "white": #fff,
+);
+
+// Create your own map
+$custom-colors: (
+  "custom-color": #900
+);
+
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$font-family-sans-serif: // Safari for OS X and iOS (San Francisco)
+  "proxima-soft", -apple-system, blinkmacsystemfont, "Segoe UI", "Roboto", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+$enable-shadows: true;
+$enable-grid-classes: true;

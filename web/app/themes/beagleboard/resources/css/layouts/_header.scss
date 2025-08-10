@@ -1,0 +1,58 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.white-to-gray-grad {
+  background: linear-gradient(360deg, #e6e6e6, #fff 100%);
+}
+
+.gray-to-white-grad {
+  background: linear-gradient(0deg, #fff, #e7e6e6 100%);
+}
+
+.gray-to-white-grad-horiz {
+  background: linear-gradient(-90deg, #fff, #e7e6e6 100%);
+}
+
+.hero {
+  min-height: 18rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 24rem;
+  }
+}
+
+.swish {
+  position: absolute;
+  z-index: 2;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  width: 10.625rem;
+
+  @include media-breakpoint-up(md) {
+    width: 16.125rem;
+  }
+}
+
+.buy-btn {
+  position: absolute;
+  right: 9rem;
+  top: 21px;
+}
+
+.nav-link:hover,
+.banner .nav a:hover,
+.nav-link:focus,
+.banner .nav a:focus {
+  color: var(--bs-primary) !important;
+}

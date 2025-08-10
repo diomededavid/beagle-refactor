@@ -1,0 +1,87 @@
+.curves,
+.product-curves,
+.product-related-curves {
+  display: flex;
+  width: 100%;
+  @extend .hero;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.grays {
+    background-color: var(--bs-black-seven);
+    background-image: var(--curved-top), var(--curved-bottom);
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+    padding: 6rem 0;
+  }
+
+  &.gray-bottom {
+    background-color: var(--bs-black-seven);
+    background-image: var(--curved-bottom);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 102%;
+    margin-top: -2px;
+  }
+
+  &.blue-gradient-curves {
+    background-color: var(--bs-black-seven);
+    background-image: var(--curved-bottom), radial-gradient(circle, #cce0f4 0%, white 100%);
+    background-position: center bottom, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 108%, cover;
+
+    img.decorator {
+      width: 100% !important;
+      height: auto;
+    }
+  }
+
+  &.blues {
+    background-image: var(--curved-top), var(--curved-bottom), radial-gradient(circle, #cce0f4 0%, white 100%);
+    background-position: center top -2px, center bottom -2px;
+    background-repeat: no-repeat, no-repeat;
+    padding: 8rem 0;
+  }
+}
+
+.blue-radial-gradient {
+  background: radial-gradient(circle, #cce0f4 0%, white 100%) no-repeat, no-repeat center top -2px, center bottom -2px;
+  padding: 8rem 0;
+}
+
+.swish-bg {
+  height: 12px;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='13.34' viewBox='0 0 300 13.34'%3E%3Cpath d='M-.79,10.61C13.88,7.94,33.9,4.52,48.86,2.86,80.48-.7,111.3.41,143.41,3.51s65.51,8.21,97.35,7.68c21.52-.36,42.8-4,59.17-7.58v9.55H-.79Z' fill='%23f26935'/%3E%3Cpath d='M300,13.34H-.79V10.77c18.6-2,39.29-4.48,60.1-5.89a604.26,604.26,0,0,1,91.25.42c30.41,2.5,60.83,7.52,91.24,7.52,21,0,42.08-2.4,58.09-4.71' fill='%23fff'/%3E%3C/svg%3E");
+  background-position: center bottom -2px;
+  background-repeat: no-repeat;
+  background-size: 105% auto;
+  padding: 6em 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.product-curves {
+  padding: 1rem 0 5rem 0;
+}
+
+.product-related-curves {
+  padding-top: 8rem;
+}
+
+.blue-curves {
+  min-height: 124px;
+  width: 100%;
+  padding: 4rem 0;
+  background-image: var(--curved-top), var(--curved-bottom), radial-gradient(circle, #cce0f4 0%, white 100%);
+  background-position: center top -2px, center bottom -2px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.blue-gradient {
+  background-image: radial-gradient(circle, #cce0f4 0%, white 100%);
+}

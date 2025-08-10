@@ -16,6 +16,12 @@
     "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
+
+    "bs-stepper": "^1.7.0",
+    "@splidejs/splide": "^4.1.4",
+    "jquery": "^3.6.3",
+    "select2": "~4.0",
+    "tinymce": "^5.8.2",
     "@roots/vite-plugin": "^1.0.2",
     "@tailwindcss/vite": "^4.0.9",
     "laravel-vite-plugin": "^1.2.0",

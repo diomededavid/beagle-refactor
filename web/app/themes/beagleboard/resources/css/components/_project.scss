@@ -1,0 +1,32 @@
+.project-card {
+  width: 300px;
+}
+
+.project-related-card {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.project-card,
+.project-related-card {
+  @extend .card;
+
+  overflow: hidden;
+  max-height: 100% !important;
+
+  &:hover {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.bolder-projects {
+  padding: 10rem 0;
+}

@@ -1,0 +1,62 @@
+.card-title {
+  margin-bottom: 0.25rem;
+}
+
+.card-text {
+  line-height: 1.2em;
+}
+
+.h-80 {
+  height: 80% !important;
+}
+
+.twitter-timeline {
+  max-width: 400px;
+}
+
+a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--bs-primary);
+  text-decoration: underline;
+}
+
+.btn-primary {
+  color: white;
+}
+
+.btn-primary:hover,
+.gform_button button:hover,
+.gform_wrapper .button:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-outline-primary {
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.btn-info {
+  color: white;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.nav-link,
+.banner .nav a {
+  color: var(--bs-primary);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-primary);
+  background-color: #e7f1ff;
+}

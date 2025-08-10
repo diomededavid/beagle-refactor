@@ -1,0 +1,163 @@
+.hover-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card-placeholder {
+  margin: 0 15px;
+  background-size: cover;
+}
+
+h4.card-title {
+  margin-bottom: 0.8rem;
+}
+
+.bg-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 300px;
+  height: 300px;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 1rem;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 10px;
+  padding: 5px 15px;
+  align-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0 3px 3px 0;
+  margin-bottom: 15px;
+
+
+  > div:last-of-type {
+    margin-bottom: 5px;
+  }
+}
+
+.card-content-grid {
+  display: grid;
+  grid-template-columns: max-content minmax(min-content, 180px) max-content;
+  grid-gap: 10px;
+
+  > div:last-of-type {
+    margin-bottom: 5px;
+  }
+}
+
+.feature-card {
+  @extend .card;
+
+  min-width: 300px;
+  overflow: hidden;
+  max-height: 100% !important;
+
+  &:hover {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  img {
+    object-fit: cover;
+    height: 318px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.distros-card {
+  min-height: 325px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 355px;
+  }
+}
+
+.distros-heading {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  svg {
+    margin: 0 0 0 10px;
+  }
+}
+
+.icon-card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    padding: 0.5rem;
+
+    @include media-breakpoint-down(md) {
+      max-height: 262px;
+    }
+  }
+}
+
+.hiddenStyle {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+
+.overlay-card {
+  width: 100%;
+  height: 24rem;
+  position: relative;
+  background-repeat: none;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  background-size: cover;
+  border: 1px solid #CBCCCE;
+}
+
+.overlay-card img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.text-overlay {
+  display: none;
+  padding: 0 2rem;
+  justify-content: center;
+  align-items: center;
+  background: rgba(91, 121, 111, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.text-overlay h2 {
+  color: #ffffff;
+  opacity: 1;
+  font-size: 36px;
+  margin: 1rem;
+}
+
+.overlay-card:hover > .text-overlay {
+  background: rgba(0, 0, 0, .4);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}

@@ -1,0 +1,93 @@
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin: ($spacer * 0.5) auto;
+  height: auto;
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: ($spacer * 0.5);
+  height: auto;
+}
+
+@include media-breakpoint-up(sm) {
+  .alignleft {
+    float: left;
+    margin-right: ($spacer * 0.5);
+  }
+
+  .alignright {
+    float: right;
+    margin-left: ($spacer * 0.5);
+  }
+}
+
+/** Captions */
+.wp-caption {
+  @extend .figure;
+}
+
+.wp-caption img {
+  @extend .figure-img;
+  @extend .img-fluid;
+}
+
+.wp-caption-text {
+  @extend .figure-caption;
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+  @extend .sr-only !optional;
+  @extend .sr-only-focusable !optional;
+}
+
+footer li {
+  display: flex !important;
+}
+
+.menu-main-menu-1 {
+  list-style: none !important;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+pre.wp-block-code code, code {
+  background: #2b2b2b !important;
+  background-color: #2b2b2b !important;
+}
+
+.wp-block-code {
+  background: #2b2b2b !important;
+  background-color: #2b2b2b !important;
+}
+pre code, li code {
+  background: #2b2b2b !important;
+  background-color: #2b2b2b !important;
+}
+
+code {
+  background: #2b2b2b !important;
+  background-color: #2b2b2b !important;
+}
