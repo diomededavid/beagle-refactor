@@ -1,20 +1,29 @@
 <?php
 
-namespace App\Controllers;
+namespace App\View\Composers;
 
-use Sober\Controller\Controller;
+use Roots\Acorn\View\Composer;
 
-include_once "CategoryDefs.php";
-
-/**
- * Controller for the archive-product view.
- */
-class ArchiveProduct extends Controller
+class ArchiveProduct extends Composer
 {
     /**
-     * The ACF field for background style.
+     * List of views served by this composer.
      *
-     * @var string
+     * @var array
      */
-    protected $acf = 'background_style';
+    protected static $views = [
+        'archive-product',
+    ];
+
+    /**
+     * Data to be passed to the view.
+     *
+     * @return array
+     */
+    public function with()
+    {
+        return [
+            'background_style' => get_field('background_style'),
+        ];
+    }
 }
