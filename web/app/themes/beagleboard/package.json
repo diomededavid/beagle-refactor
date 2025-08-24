@@ -25,6 +25,11 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.7"
+    "@splidejs/splide": "^4.1.4",
+    "bootstrap": "^5.3.7",
+    "bs-stepper": "^1.7.0",
+    "jquery": "^3.6.3",
+    "select2": "~4.0",
+    "tinymce": "^7.9.1"
   }
 }
