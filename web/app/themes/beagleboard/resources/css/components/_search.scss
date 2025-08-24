@@ -1,0 +1,20 @@
+//#search {
+//  position: absolute;
+//  top: 1.3rem;
+//  right: 90px;
+//}
+
+
+  .search_box {
+    //background: var(--bs-gray);
+    padding: 0 1%;
+    margin: auto;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
+  }
+
+.search_box.active {
+  height: auto;
+  padding: 1%;
+}

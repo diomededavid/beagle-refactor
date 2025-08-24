@@ -1,2 +1,36 @@
+@use "vendor/vendor";
+
+@import "./common/variables";
+
 @import "bootstrap/scss/bootstrap";
-@import url("https://use.typekit.net/tpq8sxk.css");
+
+// Configuration
+@import "bootstrap/scss/functions";
+
+
+
+/** Import theme styles */
+@import "./common/global";
+@import "./components/buttons";
+@import "./components/comments";
+@import "./components/forms";
+@import "./components/gforms";
+@import "./components/search";
+@import "./components/stepper";
+
+@import "./components/get-started";
+@import "./components/product";
+@import "./components/project";
+@import "./components/dividers";
+@import "./components/product-nav";
+@import "./components/card";
+@import "./layouts/header";
+@import "./layouts/sidebar";
+@import "./layouts/footer";
+@import "./layouts/pages";
+@import "./layouts/posts";
+@import "./layouts/tinymce";
+@import "./components/wp-classes";
+@import "./common/overrides";
+@import "./components/embeds";
+@import "./components/code-styles";

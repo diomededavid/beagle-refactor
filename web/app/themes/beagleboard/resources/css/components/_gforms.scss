@@ -1,0 +1,96 @@
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+
+.gform_wrapper h3.gform_title {
+  font-weight: 400 !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.gform_wrapper ul {
+  @extend .list-unstyled;
+}
+
+.gform_wrapper li {
+  @extend .form-group !optional;
+}
+
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: var(--danger);
+}
+
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="date"],
+.gform_wrapper input[type="datetime"],
+.gform_wrapper input[type="datetime-local"],
+.gform_wrapper input[type="month"],
+.gform_wrapper input[type="number"],
+.gform_wrapper input[type="password"],
+.gform_wrapper input[type="search"],
+.gform_wrapper input[type="tel"],
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="time"],
+.gform_wrapper input[type="week"],
+.gform_wrapper input[type="url"],
+.gform_wrapper select,
+.gform_wrapper textarea {
+  @extend .form-control;
+}
+
+.gform_wrapper .button {
+  display: block !important;
+  width: 100% !important;
+  height: 2rem !important;
+
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-sm;
+}
+
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    margin-bottom: 0.5rem;
+
+    @extend .alert-danger;
+  }
+
+  input,
+  select,
+  textarea {
+    @extend .alert-danger;
+  }
+}
+
+.validation_error {
+  @extend .alert;
+  @extend .alert-danger;
+}
+
+.validation_message {
+  display: none;
+}
+
+body .gform_wrapper .top_label div.ginput_container {
+  margin-top: 8px;
+  width: 100% !important;
+}
+
+.gform_wrapper .top_label input.medium,
+.gform_wrapper .top_label select.medium {
+  width: 100% !important;
+}
+
+.gform_button button {
+  display: block !important;
+  width: 100% !important;
+  height: 2rem !important;
+
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-sm;
+}
+
+.btn-primary:focus {
+  color: white;
+}

@@ -1,0 +1,195 @@
+.product-bg {
+  display: flex;
+  flex-direction: row;
+  min-height: 580px;
+  align-content: center;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    min-height: 560px;
+  }
+
+  h1 {
+    margin-top: 2rem;
+  }
+
+  &.bb-black-bg {
+    background-color: rgba(79, 79, 81, 1);
+    background-image: var(--curved-top-gray), url("./images/product-bgs/iot-background.png"), linear-gradient(90deg, rgba(167, 70, 36, 0.6) 0%, rgba(79, 79, 81, 1) 80%);
+    background-size: 130%, cover, cover;
+    background-position: bottom, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+
+  &.bb-ai-bg {
+    background-image: var(--curved-top-gray), url("./images/product-bgs/white-mesh.svg"), linear-gradient(120deg, #3c4c5d 0%, rgba(169, 127, 44, 0.6) 100%);
+    background-size: 130%, cover, cover;
+    background-position: center bottom, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+
+  &.bb-blue-bg {
+    background: rgb(44, 95, 128);
+    background: var(--curved-top-gray), radial-gradient(circle, rgba(165, 219, 255, 0.2) 0%, rgba(83, 110, 128, 0.8) 100%), url("./images/product-bgs/robots.png"), radial-gradient(circle, rgba(165, 219, 255, 1) 0%, rgba(83, 110, 128, 1) 100%);
+    background-size: 130%, cover, 240px, cover;
+    background-position: bottom, center, center, center;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+
+    h1 {
+      text-shadow: 2px 2px 7px rgba(35, 31, 32, 1);
+    }
+  }
+
+  &.bb-green-bg {
+    background: rgb(77, 77, 79);
+    background: var(--curved-top-gray), url("./images/product-bgs/green-city-bg.svg"), linear-gradient(0deg, rgb(142, 201, 105) 0%, rgba(35, 31, 32, 1) 100%);
+    background-size: 130%, contain, cover;
+    background-position: bottom, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    h1 {
+      text-shadow: 2px 2px 7px rgba(35, 31, 32, 1);
+    }
+  }
+
+  &.beagle-v-bg {
+    background-image: var(--curved-top-gray), radial-gradient(circle, rgba(242, 99, 34, 0.2) 0%, rgba(121, 50, 17, 0.8) 100%), url("./images/product-bgs/circuit-board-bg.svg"), radial-gradient(circle, rgba(242, 99, 34, 1) 0%, rgba(121, 50, 17, 1) 100%);
+    background-size: 130%, cover, 250px, cover;
+    background-position: bottom, center, center, center;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  }
+
+  &.pocket-beagle-bg {
+    background-color: #1f5b51;
+    background-image: var(--curved-top-gray), radial-gradient(circle, rgba(10, 172, 139, 0.6) 0%, rgba(31, 91, 81, 1) 100%), url(./images/product-bgs/tech-sketched-bg.svg), var(--greengrad);
+    background-size: 130%, cover, 272px, cover;
+    background-position: bottom, center, center, center;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  }
+}
+
+.card {
+  &.bb-black-bg {
+    background: linear-gradient(90deg, rgba(167, 70, 36, 0.6) 0%, rgba(79, 79, 81, 1) 80%) no-repeat center;
+    background-size: cover;
+  }
+
+  &.bb-blue-bg {
+    background: radial-gradient(circle, rgba(165, 219, 255, 0.2) 0%, rgba(83, 110, 128, 0.8) 100%) no-repeat center;
+    background-size: cover;
+  }
+
+  &.bb-ai-bg {
+    background: linear-gradient(120deg, #3c4c5d 0%, rgba(169, 127, 44, 0.6) 100%) no-repeat center;
+    background-size: cover;
+  }
+
+  &.bb-green-bg {
+    background: linear-gradient(0deg, rgb(142, 201, 105) 0%, rgba(35, 31, 32, 1) 100%) no-repeat center;
+    background-size: cover;
+  }
+
+  &.beagle-v-bg {
+    background: radial-gradient(circle, rgba(242, 99, 34, 0.2) 0%, rgba(121, 50, 17, 0.8) 100%) no-repeat center;
+    background-size: cover;
+  }
+
+  &.pocket-beagle-bg {
+    background: var(--greengrad) no-repeat center;
+    background-size: cover;
+  }
+}
+
+.distributors {
+  display: grid;
+  grid-template-columns: 12% repeat(auto-fit, 13%);
+  grid-auto-rows: auto;
+  grid-gap: 15px;
+  margin: 1rem auto 3rem auto;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5em;
+  border-radius: 5px;
+  color: black;
+
+  @include media-breakpoint-up(md) {
+    margin: 1rem auto;
+  }
+
+  .card {
+    padding: 2px;
+    height: 3.2rem;
+  }
+}
+
+.chipset-features-icon,
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+
+.chipset-features-icon {
+  &::before {
+    content: url("./images/processor.svg");
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.resources-icon {
+  &::before {
+    content: url("./images/icons/resources.svg");
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.features {
+  &::before {
+    content: url("./images/tech-specs.svg");
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.processor-text {
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+}
+
+.product-card {
+  @extend .shadow-sm;
+  @extend .hover-card;
+
+  min-height: 290px;
+}
+
+.product-card-display {
+  min-height: 238px;
+  margin: 1.25rem 1rem;
+
+  @include media-breakpoint-up(md) {
+    margin: -15px -30px 0 0;
+  }
+}
+
+.attachment-medium-custom {
+  @extend .img-fluid;
+  @extend .rounded;
+}

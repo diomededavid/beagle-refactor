@@ -1,0 +1,15 @@
+.product-nav {
+  display: flex;
+  justify-content: space-evenly;
+
+  @include media-breakpoint-up(md) {
+    justify-content: flex-end;
+    margin-top: -2rem;
+  }
+
+  a {
+    &:nth-child(2) {
+      margin: 0 10%;
+    }
+  }
+}
