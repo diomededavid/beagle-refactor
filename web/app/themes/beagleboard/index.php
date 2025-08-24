@@ -1,3 +1,5 @@
 <?php
 
-echo view(app('sage.view'), app('sage.data'))->render();
+  add_action('after_setup_theme', function () {
+    echo app('sage.view')->make('partials.header');
+  });

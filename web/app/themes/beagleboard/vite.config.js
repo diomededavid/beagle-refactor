@@ -5,6 +5,17 @@ import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
 
 export default defineConfig({
   base: '/app/themes/sage/public/build/',
+  assetsInclude: [
+    // Add other asset types here, but NOT psd
+    '**/*.png',
+    '**/*.jpg',
+    '**/*.svg',
+    '**/*.gif',
+    '**/*.webp',
+    '**/*.psd',
+    '**/*.zip',
+    '**/*.eps'
+  ],
   plugins: [
     tailwindcss(),
     laravel({
